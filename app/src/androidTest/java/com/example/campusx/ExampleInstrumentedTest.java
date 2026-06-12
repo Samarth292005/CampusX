@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Instrumented tests for the CampusX application.
@@ -31,5 +32,16 @@ public class ExampleInstrumentedTest {
 
         // Verify that the package name matches the expected value
         assertEquals(EXPECTED_PACKAGE, appContext.getPackageName());
+    }
+
+    @Test
+    public void appContextIsNotNull() {
+
+        // Get the target application's context
+        Context appContext =
+                InstrumentationRegistry.getInstrumentation().getTargetContext();
+
+        // Verify that the context exists
+        assertNotNull(appContext);
     }
 }
