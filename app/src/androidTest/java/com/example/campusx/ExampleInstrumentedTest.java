@@ -18,6 +18,10 @@ import static org.junit.Assert.assertEquals;
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
 
+    // Expected application package name
+    private static final String EXPECTED_PACKAGE =
+            "com.example.campusx";
+
     @Test
     public void useAppContext() {
 
@@ -26,6 +30,6 @@ public class ExampleInstrumentedTest {
                 InstrumentationRegistry.getInstrumentation().getTargetContext();
 
         // Verify that the package name matches the expected value
-        assertEquals("com.example.campusx", appContext.getPackageName());
+        assertEquals(EXPECTED_PACKAGE, appContext.getPackageName());
     }
 }
