@@ -8,19 +8,24 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
- * Instrumented test, which will execute on an Android device.
+ * Instrumented tests for the CampusX application.
  *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ * These tests run on a real device or emulator.
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
+
     @Test
     public void useAppContext() {
-        // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+
+        // Get the target application's context
+        Context appContext =
+                InstrumentationRegistry.getInstrumentation().getTargetContext();
+
+        // Verify that the package name matches the expected value
         assertEquals("com.example.campusx", appContext.getPackageName());
     }
 }
